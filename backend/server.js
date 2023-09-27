@@ -16,7 +16,10 @@ const server = require("http").createServer(app);
 // socket.io and then i added cors for cross origin to localhost only
 const io = require("socket.io")(server, {
   cors: {
-    origin: "*", //specific origin you want to give access to,
+    origin: "*", 
+    methods:[],
+    credentials:true,
+    //specific origin you want to give access to,
   },
 });
 
